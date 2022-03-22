@@ -2,11 +2,6 @@
 
 OpenPecha-dev combines [Mikko's Pyramid of Goodness](https://medium.com/art-technology/the-pyramid-of-goodness-for-research-and-development-organizations-78ffc28c131f) and [Shopify's GSD](https://shopify.engineering/running-engineering-program-guide). You can contact the team in our [Discord Channel](https://discord.gg/PrwMzqXm).
 
-## Ongoing Programs
-
-*   [Nalanda collaborative edition](https://github.com/orgs/OpenPecha-dev/projects/7)
-*   OpenPecha Project
-
 ## Conventions for Programs (products) 
 
 *   Development MUST NOT start until the following are prepared:
@@ -30,3 +25,8 @@ OpenPecha-dev combines [Mikko's Pyramid of Goodness](https://medium.com/art-tech
 *   Cards are linked to various repos
 
 ![](https://user-images.githubusercontent.com/17675331/159492857-c905a84b-772b-4271-85f1-6d44babb62fc.png)
+
+## Ongoing Programs
+
+*   [Nalanda collaborative edition](https://github.com/orgs/OpenPecha-dev/projects/7)
+*   OpenPecha Project
