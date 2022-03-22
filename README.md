@@ -18,7 +18,6 @@ OpenPecha-dev combines [Mikko's Pyramid of Goodness](https://medium.com/art-tech
 
 *   Github Project name is small-case
 *   Cards are 
-*   ....  
-     
+*   ....  
 
-![](https://user-images.githubusercontent.com/17675331/159446586-3744e0cb-bce3-4f56-adec-6d4a1122973b.png)
+![](https://user-images.githubusercontent.com/17675331/159492406-ea959c5c-84f0-49b8-a299-0cb338dbe714.png)
