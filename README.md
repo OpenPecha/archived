@@ -1,4 +1,4 @@
-# Projects
+# Development Conventions
 
 OpenPecha-dev combines [Mikko's Pyramid of Goodness](https://medium.com/art-technology/the-pyramid-of-goodness-for-research-and-development-organizations-78ffc28c131f) and Shopify's GSD. You can contact the team in our [Discord Channel](https://discord.gg/PrwMzqXm).
 
