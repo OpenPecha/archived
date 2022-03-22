@@ -2,7 +2,7 @@
 
 OpenPecha-dev combines [Mikko's Pyramid of Goodness](https://medium.com/art-technology/the-pyramid-of-goodness-for-research-and-development-organizations-78ffc28c131f) and [Shopify's GSD](https://shopify.engineering/running-engineering-program-guide). You can contact the team in our [Discord Channel](https://discord.gg/PrwMzqXm).
 
-## Conventions for Programs (products) 
+## Programs (products) 
 
 *   Development MUST NOT start until the following are prepared:
     *   Market environment canvas
@@ -16,7 +16,7 @@ OpenPecha-dev combines [Mikko's Pyramid of Goodness](https://medium.com/art-tech
 *   Cards contain a user story
 *   Cards are never linked to a specific repo
 
-## Conventions for Projects (work orders)
+## Projects (work orders)
 
 *   Project name on Github is small-caps
 *   Kanban are set as **Automated Kanban**
