@@ -9,7 +9,7 @@ OpenPecha-dev combines [Mikko's Pyramid of Goodness](https://medium.com/art-tech
 
 ## Conventions for Programs (products) 
 
-*   Programs can start after the following are prepared:
+*   Development MUST NOT start until the following are prepared:
     *   Market environment canvas
     *   Avatar profile & empathy map
     *   Value proposition canvas
