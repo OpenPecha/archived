@@ -7,17 +7,18 @@ OpenPecha-dev combines [Mikko's Pyramid of Goodness](https://medium.com/art-tech
 *   [Nalanda collaborative edition](https://github.com/orgs/OpenPecha-dev/projects/7)
 *   OpenPecha Project
 
-## Programs Level Conventions
+## Conventions for Programs (products) 
 
-*   Programs correspond 
-*   Github Project name is CAPITALIZED
-*   All cards are Projects
-*   ....
+*   Program names on Github are CAPITALIZED
+*   Kanban are structured as roadmaps
+*   Cards represents specific projects
+*   Cards contain a user story
+*   Cards are never linked to a specific repo
 
-## Project Level Conventions
+## Conventions for Projects (work orders)
 
-*   Github Project name is small-case
-*   Cards are 
-*   ....  
+*   Project names on Github are small-case
+*   Cards contain a user story
+*   Cards are linked to various repos
 
 ![](https://user-images.githubusercontent.com/17675331/159492857-c905a84b-772b-4271-85f1-6d44babb62fc.png)
