@@ -20,4 +20,4 @@ OpenPecha-dev combines [Mikko's Pyramid of Goodness](https://medium.com/art-tech
 *   Cards are 
 *   ....  
 
-![](https://user-images.githubusercontent.com/17675331/159492406-ea959c5c-84f0-49b8-a299-0cb338dbe714.png)
+![](https://user-images.githubusercontent.com/17675331/159492857-c905a84b-772b-4271-85f1-6d44babb62fc.png)
