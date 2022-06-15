@@ -19,13 +19,12 @@
 
 ## Description
 
-Repo containing deleted repos that could still be usefull for future reference. 
+This repo contains deleted repos that could still be usefull for future reference. You can archive repos in two ways:
 
-Repos requiring a shallow backup are cloned in the root and pushed WITHOUT the .git directory.
+- Repos requiring a shallow backup are cloned in the root and pushed WITHOUT the .git directory.
+- Repos requiring a full backup (branches and comments included) are added in mirrors/ with [git clone --mirror](https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository#mirroring-a-repository-in-another-location)
 
-Repos requiring a full backup (branches and comments included) are added in mirrors/ with [git clone --mirror](https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository#mirroring-a-repository-in-another-location)
-
-This repo also contains projects and issues from Q2 2022.
+Note: this repo also contains projects and issues from Q2 2022.
 
 <!-- This section provides a high-level overview for the repo -->
 
