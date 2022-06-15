@@ -19,7 +19,13 @@
 
 ## Description
 
-Repo containing deleted repos that could still be usefull for future reference. All repos are put in the root. The repo also contains projects and issues from Q2 2022.
+Repo containing deleted repos that could still be usefull for future reference. 
+
+Repos requiring a shallow backup are cloned in the root and pushed WITHOUT the .git directory.
+
+Repos requiring a full backup (branches and comments included) are added in mirrors/ with [git clone --mirror](https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository#mirroring-a-repository-in-another-location)
+
+This repo also contains projects and issues from Q2 2022.
 
 <!-- This section provides a high-level overview for the repo -->
 
