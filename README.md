@@ -1,34 +1,43 @@
-# Development Conventions
+<h1 align="center">
+  <br>
+  <a href="https://openpecha.org"><img src="https://avatars.githubusercontent.com/u/82142807?s=400&u=19e108a15566f3a1449bafb03b8dd706a72aebcd&v=4" alt="OpenPecha" width="150"></a>
+  <br>
+</h1>
 
-OpenPecha-dev [happens here.](https://github.com/orgs/OpenPecha-dev/projects)
+<h3 align="center">Archived</h3>
 
-Our development methodology combines [Mikko's Pyramid of Goodness](https://medium.com/art-technology/the-pyramid-of-goodness-for-research-and-development-organizations-78ffc28c131f) and the gist of [Shopify's GSD](https://shopify.engineering/running-engineering-program-guide).
 
-## Programs (aka products) 
+<!-- Replace the title of the repository -->
 
-*   Development MUST NOT start until the following are prepared:
-    *   Market environment canvas
-    *   Empathy map & Avatar profile
-    *   Value proposition canvas
-    *   Business model canvas
-    *   MVP canvas
-*   Program name on Github is CAPITALIZED
-*   Kanban is structured as a roadmap
-*   Each card represents one project
-*   Cards contain a user story
-*   Cards are never linked to a specific repo
+<p align="center">
+  <a href="#description">Description</a> •
+  <a href="#owner">Owner</a> •
+  <a href="#integrations">Integrations</a> •
+  <a href="#docs">Docs</a>
+</p>
+<hr>
 
-## Projects (aka work orders)
+## Description
 
-*   Project name on Github is small-caps
-*   Kanban are set as **Automated Kanban**
-*   Cards are decided by the 
-*   Cards contain a user story
-*   Cards are linked to various repos
+Repo containing deleted repos that could still be usefull for future reference. All repos are put in the root.
 
-![](https://user-images.githubusercontent.com/17675331/159492857-c905a84b-772b-4271-85f1-6d44babb62fc.png)
+<!-- This section provides a high-level overview for the repo -->
 
-## Ongoing Programs
+## Owner
 
-*   [Nalanda collaborative edition](https://github.com/orgs/OpenPecha-dev/projects/7)
-*   OpenPecha Project
+- [@ngawangtrinley](https://github.com/ngawangtrinley)
+- [@mikkokotila](https://github.com/mikkokotila)
+
+<!-- This section lists the owners of the repo -->
+
+## Integrations
+
+- No integrations with other repos.
+
+<!-- This section must list as bulleted list how this repo depends or is integrated with other repos -->
+
+## Docs
+
+No documentations.
+
+<!-- This section must link to the docs which are in the root of the repository in /docs -->
