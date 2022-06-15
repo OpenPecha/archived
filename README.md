@@ -19,7 +19,7 @@
 
 ## Description
 
-Repo containing deleted repos that could still be usefull for future reference. All repos are put in the root.
+Repo containing deleted repos that could still be usefull for future reference. All repos are put in the root. The repo also contains projects and issues from Q2 2022.
 
 <!-- This section provides a high-level overview for the repo -->
 
