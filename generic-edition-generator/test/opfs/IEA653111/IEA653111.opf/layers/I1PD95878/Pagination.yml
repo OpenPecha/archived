@@ -1,0 +1,82 @@
+id: a246b36f917e4a2180ed2cc5a8d7cab1
+annotation_type: Pagination
+revision: '00001'
+annotations:
+  b37ec510b18447279ae1917facad7ced:
+    span:
+      start: 0
+      end: 738
+    imgnum: 1
+    reference: I1PD958780001.jpg
+  38efef8fd235420aa623b0fc74b62bd3:
+    span:
+      start: 743
+      end: 2117
+    imgnum: 3
+    reference: I1PD958780003.jpg
+  d3ca8646ea53422393d6b940380cd432:
+    span:
+      start: 2122
+      end: 3465
+    imgnum: 4
+    reference: I1PD958780004.jpg
+  b353fdd10dcd44b1bdc40ef9cf3afd7b:
+    span:
+      start: 3470
+      end: 4774
+    imgnum: 8
+    reference: I1PD958780008.jpg
+  e510f7c6cef1448c90e5b070d11f03e6:
+    span:
+      start: 4779
+      end: 6154
+    imgnum: 10
+    reference: I1PD958780010.jpg
+  0430951da3d74fe89f7cbd38e9097a68:
+    span:
+      start: 6159
+      end: 7515
+    imgnum: 12
+    reference: I1PD958780012.jpg
+  a045a9bb74024803a2d6c211038b15b2:
+    span:
+      start: 7520
+      end: 8950
+    imgnum: 13
+    reference: I1PD958780013.jpg
+  f19fc0db881c43848a2a5260da0f8048:
+    span:
+      start: 8955
+      end: 10402
+    imgnum: 14
+    reference: I1PD958780014.jpg
+  f19fc0db881c43848a2a4260da0f8048:
+    span:
+      start: 10405
+      end: 11759
+    imgnum: 15
+    reference: I1PD958780015.jpg
+  f19fc0db881c43848a2a4260da5f8048:
+    span:
+      start: 11761
+      end: 11788
+    imgnum: 17
+    reference: I1PD958780017.jpg
+  f19fc0db881c93848a2a5269da0f8158:
+    span:
+      start: 11790
+      end: 13079
+    imgnum: 18
+    reference: I1PD958780018.jpg
+  f19fc0db881c93848a2a5249da0f8158:
+    span:
+      start: 13081
+      end: 14403
+    imgnum: 19
+    reference: I1PD958780019.jpg
+  f19fc0db881c93848o2a5269da0f8158:
+    span:
+      start: 14405
+      end: 14451
+    imgnum: 20
+    reference: I1PD958780020.jpg

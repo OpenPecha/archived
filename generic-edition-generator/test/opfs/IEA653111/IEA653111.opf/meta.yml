@@ -1,0 +1,45 @@
+id: IEA653111
+ocr_import_info:
+  source: bdrc
+  software: google_books
+  batch: batch001
+  expected_default_language: bo
+  bdrc_scan_id: W1PD95844
+  ocr_info:
+    timestamp: 2020-12-01 11:38:59
+    imagesfolder: images
+    language_hints: null
+    model: builtin/weekly
+  op_import_options: {}
+  op_import_version: 0.9.16
+default_language: bo
+source: https://library.bdrc.io
+initial_creation_type: ocr
+imported: 2022-12-13 06:56:19.335538+00:00
+last_modified: 2022-12-13 06:56:19.336536+00:00
+source_metadata:
+  id: http://purl.bdrc.io/resource/W1PD95844
+  status: http://purl.bdrc.io/admindata/StatusReleased
+  access: http://purl.bdrc.io/admindata/AccessFairUse
+  geo_restriction:
+  - CN
+  reproduction_of: http://purl.bdrc.io/resource/MW1PD95844
+  copyright_status: http://purl.bdrc.io/resource/CopyrightPublicDomain
+  title: བསྟན་འགྱུར། ༼དཔེ་བསྡུར་མ༽
+  languages:
+  - bo
+statistics:
+  ocr_word_mean_confidence_index: 0.9767592648222124
+  ocr_word_median_confidence_index: 1.0
+bases:
+  I1PD95878:
+    source_metadata:
+      id: http://purl.bdrc.io/resource/I1PD95878
+      total_pages: 1810
+      volume_number: 33
+      volume_pages_bdrc_intro: 2
+    order: 33
+    base_file: I1PD95878.txt
+    statistics:
+      ocr_word_median_confidence_index: 0.9999999
+      ocr_word_mean_confidence_index: 0.9755740258134236
