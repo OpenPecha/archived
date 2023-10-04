@@ -1,0 +1,197 @@
+{% extends "layout.html" %}
+
+{% block title %} OpenPecha | Home {% endblock %}
+
+{% block nav %}
+<nav class="navbar navbar-expand-md fixed-top">
+    <a class="navbar-brand" href="/">OpenPecha</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="https://openpecha.github.io" target="_">Documentation</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<main role="main">
+    <div class="jumbotron">
+        <div class="container">
+            <h4 class="display-4 text-center">Etext archive facilitating cross-disciplinary collaboration in
+                curating
+                and enriching
+                etexts.</h4>
+            <p class="text-center"><a class="btn-custom btn-lg" href="#" role="button" data-toggle="modal"
+                    data-target="#CreatePechaModal">Get
+                    Started &raquo;</a></p>
+        </div>
+    </div>
+
+    <div class="container sections">
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">Format</h3>
+                        <h6 class="card-subtitle mb-2 text-muted"></h6>
+                        <p class="card-text">
+                        <p>
+                            <svg width="5em" height="5em" viewBox="0 0 16 16" class="bi bi-code-square"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                <path fill-rule="evenodd"
+                                    d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z" />
+                            </svg>
+                        </p>
+                        <p>A format to represent a text with all sorts of annotations.</p>
+                        <a class="btn btn-custom" href="https://openpecha.github.io/format/" target="_">Learn more
+                            &raquo;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">Editor</h3>
+                        <h6 class="card-subtitle mb-2 text-muted"></h6>
+                        <p class="card-text">
+                        <p>
+                            <svg width="5em" height="5em" viewBox="0 0 16 16" class="bi bi-layout-text-window-reverse"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M2 1h12a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm12-1a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z" />
+                                <path fill-rule="evenodd"
+                                    d="M5 15V4H4v11h1zM.5 4h15V3H.5v1zM13 6.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm0 3a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm0 3a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5z" />
+                            </svg>
+                        </p>
+                        <p>An Editor for <strong>creating</strong> new annotations and <strong>correcting</strong> old
+                            annotations. It also allows to <strong>export</strong> annotations in supported format like
+                            .epub
+                        </p>
+                        </p>
+                        <a class="btn btn-custom" href="https://openpecha.github.io/editor/" taget="_">Learn more
+                            &raquo;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">Catalog</h3>
+                        <h6 class="card-subtitle mb-2 text-muted"></h6>
+                        <p class="card-text">
+                        <p>
+                            <svg width="5em" height="5em" viewBox="0 0 16 16" class="bi bi-list-ul" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                            </svg>
+                        </p>
+                        <p>A catalog of all the text published in openpecha format</p>
+                        </p>
+                        <a class="btn btn-custom" href="https://openpecha.github.io/catalog/" target="_">Learn
+                            more
+                            &raquo;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<!-- Create Pecha Modal -->
+<div class="modal fade" id="CreatePechaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog  modal-xl modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">Import</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" method="post" action="{{ url_for('pecha.create_pecha') }}"
+                    enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" class="form-control" name="title" placeholder="བློ་གྲོས་མཐའ་ཡས་པའི་མཛོད།"
+                            required>
+                        <div class="invalid-feedback">
+                            Please choose a username.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Subtitle</label>
+                        <input type="text" class="form-control" name="sub-title" placeholder="དེབ་ཕྲེང་གསུམ་པ།">
+                    </div>
+                    <div class="form-group">
+                        <label>Author</label>
+                        <input type="text" class="form-control" name="author" placeholder="མཉམ་མེད་དྭགས་པོ་ལྷ་རྗེ།"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label>Collection Title</label>
+                        <input type="text" class="form-control" , name="collection-title">
+                    </div>
+                    <div class="form-group">
+                        <label for="validationCustom02">Book Number in Series</label>
+                        <input type="text" class="form-control" name="sku" placeholder="RDI-SS-03" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Publisher</label>
+                        <input type="text" class="form-control" , name="publisher">
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" name="front-cover-image" id="customFile"
+                                required>
+                            <label class="custom-file-label" for="customFile">Front Cover Image</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group custom-file">
+                            <input type="file" class="custom-file-input" name="publication-data-image" id="customFile"
+                                required>
+                            <label class="custom-file-label" for="customFile">Publication Data Image</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group custom-file">
+                            <input type="file" class="custom-file-input" name="content-images" id="customFile" multiple>
+                            <label class="custom-file-label" for="customFile">Content Images </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>eText of Whole Tibetan Book</label>
+                        <textarea rows="10" class="form-control" name="content-text" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <span class="text-muted">opepecha.org</span>
+    </div>
+</footer>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "login_layout.html" %}
+
+{% block title %}OpenPecha | Login{% endblock %}
+
+{%block form_content %}
+<form class="login-form-container">
+  <div class="form-group">
+    <center>
+      <p>Welcome to Openpecha Editor</p>
+    </center>
+  </div>
+  <a href="{{ url_for('user.login') }}" class="btn btn-primary btn-block">Login/Register</a>
+</form>
+{% endblock %}

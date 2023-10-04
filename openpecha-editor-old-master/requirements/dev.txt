@@ -1,0 +1,13 @@
+-r prod.txt
+
+# Testing
+pytest
+coverage
+covdefaults
+WebTest==2.0.35
+factory-boy==3.0.1
+
+# Lint and code style
+pre-commit
+black==19.10b0
+isort==5.5.3

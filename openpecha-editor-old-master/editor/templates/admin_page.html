@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <h1>{{ title }}</h1>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{ category }}">
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <button class="btn btn-primary" data-toggle="modal" data-target="#PechaSecretModal">Add Pecha</button>
+    <h3> Pechas </h3>
+    <table class="table">
+        <thead class="thead-dark">
+            <th scope="col">Pecha Id</th>
+            <th scope="col">Secret Key</th>
+        </thead>
+        <tbody>
+            {% for pecha in pechas %}
+            <tr>
+                <th scopr="row">{{ pecha.id }}</th>
+                <td>{{ pecha.secret_key }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h3> Users </h3>
+    <table class="table">
+        <thead class="thead-dark">
+            <th scope="col">Username</th>
+            <th scope="col">Pecha ID</th>
+            <th scope="col">Role</th>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <th scopr="row">{{ user.username }}</th>
+                <td>{{ user.pecha_id }}</td>
+                <td>{{ user.role.value }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <!-- Export Modal -->
+    <div class="modal fade" id="PechaSecretModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Enter Pecha ID</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="{{ url_for('pecha.create_secret') }}" method="post">
+                        <fieldset class="form-group">
+                            <input type="text" class="form-control" name="pecha-id">
+                        </fieldset>
+                        <button type="submit" class="btn btn-sm btn-outline-success btn-block">Create</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+# Flask
+Flask==1.1.2
+Werkzeug==1.0.1
+click>=7.0
+
+# Database
+Flask-SQLAlchemy==2.4.4
+SQLAlchemy==1.3.19
+psycopg2-binary==2.8.6
+
+
+# Migrations
+Flask-Migrate==2.5.3
+
+# Forms
+Flask-WTF==0.14.3
+WTForms==2.3.3
+
+# Deployment
+gunicorn>=19.9.0
+supervisor==4.2.1
+
+# Auth
+GitHub-Flask==3.2.0
+
+# Web Hooks
+flask-githubapp==0.2.0
+
+# Environment variable parsing
+environs==8.0.0
+
+# Utils
+openpecha
+antx==0.1.3

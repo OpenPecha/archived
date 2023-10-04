@@ -1,0 +1,192 @@
+{% extends "layout.html" %}
+{% block head %}
+<!--Fonts-->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font.css') }}">
+
+<!-- CodeMirror -->
+<script src="{{ url_for('static', filename='codemirror/lib/codemirror.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='codemirror/lib/codemirror.css') }}">
+
+<!-- CodeMirror theme -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='codemirror/theme/darcula.css') }}">
+
+<!-- CodeMirror mode -->
+<script src="{{ url_for('static', filename='codemirror/addon/mode/simple.js') }}"></script>
+<script src="{{ url_for('static', filename='codemirror/mode/hfml/hfml.js') }}"></script>
+
+<!-- CodeMirror adons -->
+<link rel="stylesheet" type="text/css"
+    href="{{ url_for('static', filename='codemirror/addon/display/fullscreen.css') }}">
+<script src="{{ url_for('static', filename='codemirror/addon/display/fullscreen.js') }}"></script>
+
+<!-- Custome CSS -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/toolbar.css') }}">
+
+{% endblock %}
+
+{% block title %}OpenPecha | Editor{% endblock %}
+
+{% block nav %}
+<div class="toolbar">
+
+    <div class="toolbar-item item-left">
+        <a href="#" data-toggle="collapse" data-target="#demo" id="files-toggle"><img
+                src="{{ url_for('static', filename='img/icons/book.png') }}" alt="book-icon"
+                style="height: 25px; width: 25px;"></a>
+    </div>
+    <div class="item-left delimeter"></div>
+    <div class="toolbar-item item-left">
+        <div class="btn-group">
+            <span>Layers:</span>
+            <button id="cur-ann-label" class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="true"></button>
+            <ul class="dropdown-menu">
+                <h6 class="dropdown-header">VIEWS</h6>
+                <li class="dropdown-submenu">
+                    <a class="dropdown-item" href="#">Tsadra Epub</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">BookTitle</a></li>
+                        <li><a class="dropdown-item" href="#">Author</a></li>
+                        <li><a class="dropdown-item" href="#">Chapter</a></li>
+                        <li><a class="dropdown-item" href="#">Citation</a></li>
+                        <li><a class="dropdown-item" href="#">Sabche</a></li>
+                        <li><a class="dropdown-item" href="#">BaseText</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown-submenu">
+                    <a class="dropdown-item" href="#">Diplomatic Edition</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Normalization</a></li>
+                    </ul>
+                </li>
+                <div class="dropdown-divider"></div>
+                <h6 class="dropdown-header">ANNOTATIONS</h6>
+                <li><a class="dropdown-item" href="#">BookTitle</a></li>
+                <li><a class="dropdown-item" href="#">Author</a></li>
+                <li><a class="dropdown-item" href="#">Chapter</a></li>
+                <li><a class="dropdown-item" href="#">Citation</a></li>
+                <li><a class="dropdown-item" href="#">Sabche</a></li>
+                <li><a class="dropdown-item" href="#">BaseText</a></li>
+                <li><a class="dropdown-item" href="#">publication</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- <div class="item-left delimeter"></div>
+    <div class="toolbar-item item-left">
+        <span class="toolbar-legend">Theme</span>
+        <select onchange="selectTheme()" class="selector">
+            <option selected>default</option>
+            <option>3024-day</option>
+            <option>3024-night</option>
+            <option>abcdef</option>
+            <option>ambiance</option>
+            eoptioneayu-dark</option>
+        </select>
+    </div> -->
+    <div class="item-left delimeter"></div>
+    <div class="toolbar-item item-left">
+        <a href="#" data-toggle="modal" data-target="#exportModal"><img
+                style="height: 18px; width: 18px; margin-top: 2px;"
+                src="{{ url_for('static', filename='img/icons/download.png') }}" alt="upload-icon"></a>
+    </div>
+    {% if is_owner %}
+    <div class="item-left delimeter"></div>
+    <div class="toolbar-item item-left">
+        <a id="publish-link" href="{{ url_for('main.publish', pecha_id=pecha_id) }}"><span
+                class="toolbar-button">Publish</span></a>
+    </div>
+    {% endif %}
+
+    <div class="toolbar-item item-right">
+        <a id=href="{{ url_for('user.logout', pecha_id=pecha_id) }}"><span class="toolbar-button">Logout<img
+                    id="hunCaret" src="" alt=""></span></a>
+    </div>
+
+    <div class="toolbar-item item-right">
+        <a href="#"><span id="upload"><img style="height: 20px; width: 20px;"
+                    src="{{ url_for('static', filename='img/icons/upload.png')}}" alt="upload-icon"></a>
+        </span></a>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+<!-- Export Modal -->
+<div class="modal fade" id="exportModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Download</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="{{ url_for('main.export', pecha_id=pecha_id) }}" method="post">
+                    <fieldset class="form-group">
+                        <b>Choose Annotations</b>
+                        {% for layer in layers %}
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="layers" value="{{ layer }}">
+                            <label class="form-check-label">
+                                <i>{{ layer }}</i>
+                            </label>
+                        </div>
+                        {% endfor %}
+                        <b>Choose Format:</b>
+                        {% for format in formats %}
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="format" value="{{ format }}">
+                            <label class="form-check-label">
+                                <i>{{ format }}</i>
+                            </label>
+                        </div>
+                        {% endfor %}
+                    </fieldset>
+                    <button type="submit" class="btn btn-sm btn-outline-success btn-block">Download</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row main">
+    <div class="col-1 scrollbar collapse" id="demo">
+        <div class="repo-files" id="file-list"></div>
+    </div>
+    <div class="col" id="editor-section">
+        <div class="container" id="editor"></div>
+    </div>
+</div>
+
+<script type="module" src="{{ url_for('static', filename='js/utils.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/github.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/files.js') }}"></script>
+<script type="module">
+    import { listFiles } from "{{ url_for('static', filename='js/files.js') }}";
+
+    function updateAnnLabel(annName) {
+        $('#cur-ann-label').html(annName + ' <span class="caret"></span>');
+    }
+
+    $(document).ready(function () {
+        $(".dropdown-menu li a").click(function () {
+            var annName = $(this).text();
+            updateAnnLabel(annName);
+            listFiles('OpenPecha', '{{ pecha_id }}', annName);
+        });
+
+        //preload BaseText
+        var defaultAnnName = "BaseText";
+        updateAnnLabel(defaultAnnName);
+        listFiles('OpenPecha', '{{ pecha_id }}', defaultAnnName);
+
+    });
+</script>
+<script type="module" src="{{ url_for('static', filename='js/editor.js') }}"></script>
+{% endblock %}
