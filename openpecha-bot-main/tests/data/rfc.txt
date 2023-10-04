@@ -1,0 +1,41 @@
+## Work Phases
+<h2 id="work-phases"></h2>
+
+
+<h3 id="non-coding">Non-Coding</h3>
+
+*Keep original naming and structure, and keep as first section in Work phases section*
+
+  - [ ] Planning
+  - [ ] Documentation
+  - [ ] Testing
+
+<h3 id="implementation">Implementation</h3>
+
+**Frontend + Models**
+- [x] create create OCR task form (`work_ids`, `ocr_engine`, `model_type`)
+- [x] Display a tasks status page
+    - [x] table to list tasks status (task_id, source_id, pipeline_config, status, result)
+- [x] Test for displaying tasks status page
+
+**Setup Celery Task Mangement**
+- [ ] create Celery task function for each supported pipeline.
+- [ ] create task form handler view
+    - [ ] select a celery task pipeline function for given task
+    - [ ] execute the task in celery worker
+
+**Integrate Pipeline module**
+- [ ] call pipeline function from celery task
+
+**REST API for Reimport pipeline**
+- [ ] create an endpoint to handle `reimport pipeline`
+    - [ ] store completed reimport task in `reimport_tasks_completed`
+
+<h3 id="documentation">Documentation</h3>
+- [ ] User Documentation
+    - [ ] Usage
+- [ ] Developer Documentation
+    - [ ] comment all the module
+    - [ ] comment all classes
+    - [ ] comment all methods
+    - [ ] comment all functions
